@@ -1,0 +1,19 @@
+---
+# tasks file for virtualbox (Ubuntu specific)
+
+- name: Add APT key for Oracle VirtualBox repository
+  apt_key: >
+    url=https://www.virtualbox.org/download/oracle_vbox.asc
+    state=present
+  tags: virtualbox
+
+- name: Configure Oracle VirtualBox APT repository
+  apt_repository: >
+    repo="deb http://download.virtualbox.org/virtualbox/debian {{ ansible_distribution_release }} contrib"
+    state=present
+    update_cache=yes
+  tags: virtualbox
+
+- name: Install VirtualBox
+  apt: name=virtualbox-{{ virtualbox_version }} state=present
+  tags: virtualbox
