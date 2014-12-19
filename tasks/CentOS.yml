@@ -1,2 +1,15 @@
 ---
 # tasks file for virtualbox (CentOS specific)
+
+- name: Configure Oracle VirtualBox YUM repository
+  template: >
+    src=virtualbox.repo.j2
+    dest=/etc/yum.repos.d/virtualbox.repo
+    owner=root
+    group=root
+    mode=0644
+  tags: virtualbox
+
+- name: Install VirtualBox
+  yum: name=VirtualBox-{{ virtualbox_version }} state=present
+  tags: virtualbox
