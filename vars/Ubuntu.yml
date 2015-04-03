@@ -1,2 +1,5 @@
 ---
 # vars file for virtualbox (Ubuntu specific)
+
+virtualbox_packages:
+  - virtualbox-{{ virtualbox_version }}

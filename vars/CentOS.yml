@@ -1,2 +1,5 @@
 ---
 # vars file for virtualbox (CentOS specific)
+
+virtualbox_packages:
+  - VirtualBox-{{ virtualbox_version }}

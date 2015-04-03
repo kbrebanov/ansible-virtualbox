@@ -10,6 +10,7 @@
     mode=0644
   tags: virtualbox
 
-- name: Install VirtualBox
-  yum: name=VirtualBox-{{ virtualbox_version }} state=present
+- name: Install VirtualBox packages
+  yum: name={{ item }} state=present
+  with_items: virtualbox_packages
   tags: virtualbox

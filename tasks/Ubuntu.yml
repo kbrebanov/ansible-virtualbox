@@ -15,5 +15,6 @@
   tags: virtualbox
 
 - name: Install VirtualBox
-  apt: name=virtualbox-{{ virtualbox_version }} state=present
+  apt: name={{ item }} state=present
+  with_items: virtualbox_packages
   tags: virtualbox
