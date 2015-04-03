@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Kevin Brebanov
-  description: Installs and configures VirtualBox
+  description: Installs VirtualBox
   company:
   # Some suggested licenses:
   # - BSD (default)
