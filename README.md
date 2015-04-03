@@ -1,5 +1,5 @@
-Role Name
-=========
+virtualbox
+==========
 
 Installs VirtualBox.
 
@@ -11,26 +11,38 @@ This role requires Ansible 1.4 or higher.
 Role Variables
 --------------
 
-    # VirtualBox version to install
-    virtualbox_version: 4.3
+| Name               | Default | Description                      |
+|--------------------|---------|----------------------------------|
+| virtualbox_version | 4.3     | Version of VirtualBox to install |
 
 Dependencies
 ------------
 
+CentOS:
+  - kbrebanov.selinux
+  - kbrebanov.dkms
+  - kbrebanov.kernel_headers
+
+Ubuntu:
+  - kbrebanov.dkms
+  - kbrebanov.kernel_headers
+
 Example Playbook
 ----------------
 
-1) Install VirtualBox
+Install VirtualBox
+```
+- hosts: all
+  roles:
+    - { role: kbrebanov.virtualbox }
+```
 
-    - hosts: all
-      roles:
-         - { role: virtualbox }
-
-2) Install specific version of VirtualBox
-
-    - hosts: all
-      roles:
-         - { role: virtualbox, virtualbox_version: 4.1 }
+Install specific version of VirtualBox
+```
+- hosts: all
+  roles:
+    - { role: kbrebanov.virtualbox, virtualbox_version: 4.2 }
+```
 
 License
 -------
