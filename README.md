@@ -1,6 +1,8 @@
 virtualbox
 ==========
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.virtualbox-660198.svg)](https://galaxy.ansible.com/list#/roles/3310)
+
 Installs VirtualBox.
 
 Requirements
