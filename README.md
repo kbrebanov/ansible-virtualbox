@@ -15,7 +15,7 @@ Role Variables
 
 | Name               | Default | Description                      |
 |--------------------|---------|----------------------------------|
-| virtualbox_version | 4.3     | Version of VirtualBox to install |
+| virtualbox_version | 5.0     | Version of VirtualBox to install |
 
 Dependencies
 ------------
