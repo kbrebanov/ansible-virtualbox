@@ -3,3 +3,6 @@
 
 virtualbox_packages:
   - virtualbox-{{ virtualbox_version }}
+
+virtualbox_key: http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+

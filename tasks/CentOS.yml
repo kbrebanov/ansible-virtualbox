@@ -12,5 +12,5 @@
 
 - name: Install VirtualBox packages
   yum: name={{ item }} state=present
-  with_items: virtualbox_packages
+  with_items: "{{ virtualbox_packages }}"
   tags: virtualbox
