@@ -15,5 +15,5 @@
   with_items: "{{ virtualbox_packages }}"
   tags: virtualbox
 ## mostly for travis to avoid stalling "No output has been received in the last 10m0s"...
-  async: 600
+  async: 900
   poll: 15
