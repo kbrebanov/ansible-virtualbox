@@ -1,9 +1,6 @@
 ---
 # tasks file for virtualbox (Ubuntu specific)
 
-- include_vars: Ubuntu-16.04.yml
-  when: ansible_distribution_release == 'xenial'
-
 - name: Add APT key for Oracle VirtualBox repository
   apt_key: >
     url={{ virtualbox_key }}
