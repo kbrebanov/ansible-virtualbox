@@ -3,7 +3,7 @@
 
 - name: Add APT key for Oracle VirtualBox repository
   apt_key: >
-    url=http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc
+    url={{ virtualbox_key }}
     state=present
   tags: virtualbox
 
@@ -15,5 +15,5 @@
 
 - name: Install VirtualBox packages
   apt: name={{ item }} state=present update_cache=yes
-  with_items: virtualbox_packages
+  with_items: "{{ virtualbox_packages }}"
   tags: virtualbox

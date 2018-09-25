@@ -1,4 +1,5 @@
 ---
 # defaults file for virtualbox
 
-virtualbox_version: 5.0
+virtualbox_version: 5.1
+
